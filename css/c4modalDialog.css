@@ -1,0 +1,71 @@
+
+#c4modalDialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5); /*dim the background*/
+}
+
+#c4modalDialogContainer {
+    width:400px;
+    margin:100px auto 0px auto;
+    background-color:#ffffff;
+    border-radius:3px;
+    border:1px solid #333;
+    box-shadow: 2px 2px 2px 0px #555;
+}
+#c4modalDialogMsgContainer {
+    padding:20px;
+    text-align:left;
+    font-size:16px;
+}
+#c4modalDialogButtonContainer {
+    overflow:auto;
+    padding:20px;
+    text-align:right;
+}
+
+.c4modalDialogButton {
+    display: inline-block;
+    color: #222;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 4px 10px;
+    text-decoration: none;
+    text-align:center;
+    cursor: pointer;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #c1d2e7; 
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#e3e8fe', endColorstr='#c1d2e7'); /*For IE7-8-9*/ 
+    background: -ms-linear-gradient(top, #e3e8fe 5%, #c1d2e7 100%);
+    background: -moz-linear-gradient(top, #e3e8fe 5%, #c1d2e7 100%);
+    background: -webkit-linear-gradient(top, #e3e8fe 5%, #c1d2e7 100%);
+    background: linear-gradient(to bottom, #e3e8fe 5%, #c1d2e7 100%);
+    border: 1px solid #a8b6d9;
+    outline:none;
+    margin-right:10px;
+}
+
+.c4modalDialogButton:hover {
+
+    background-color: #aac6e9; 
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ced7fb', endColorstr='#aac6e9'); /*For IE7-8-9*/ 
+    background: -ms-linear-gradient(top, #ced7fb 5%, #aac6e9 100%);
+    background: -moz-linear-gradient(top, #ced7fb 5%, #aac6e9 100%);
+    background: -webkit-linear-gradient(top, #ced7fb 5%, #aac6e9 100%);
+    background: linear-gradient(to bottom, #ced7fb 5%, #aac6e9 100%);
+}
+
+.c4modalDialogButton:active {
+
+    position: relative;
+    top: 1px;
+}

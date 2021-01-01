@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">     
+    <meta http-equiv="Pragma" content="no-cache, no-store" />
+    <meta http-equiv="Expires" content="31 Dec 1997" />
+    <meta charset="UTF-8">
+    <title>concentration :::::::</title>
+
+    <link rel="stylesheet" type="text/css" href="../../inc/style.css" />
+
+    <style type="text/css">
+
+
+      html {
+      }
+
+      body {
+      font-family: 'Inter', sans-serif;                              
+      font-size:16px;
+      line-height:18px;
+      color:#333;
+      height:100%;
+      background-color:#efefef;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;  
+      }
+
+      #mainContent {
+      width:920px;
+      height:100%;
+      margin: 0 auto 0 auto;
+      border-right:1px solid #ccc;
+      border-left:1px solid #ccc;
+      background-image:url(../images/p7.png);
+      padding-left:40px;
+      padding-right:40px;
+      background-color:#fff;
+      }
+    </style>
+
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/preloadjs-0.4.1.min.js"></script>
+    <script type="text/javascript" src="js/easeljs-0.8.0.min.js"></script>
+    <script type="text/javascript" src="js/tweenjs-0.6.0.min.js"></script>
+    <script type="text/javascript">var cjs = createjs;</script>
+    <script type="text/javascript" src="js/Bacon.min.js"></script>
+    <script type="text/javascript" src="js/DataTable.js"></script>
+    <script type="text/javascript" src="js/Q_Slider.js"></script>
+    <script type="text/javascript" src="js/DropSequence.js"></script>
+    <script type="text/javascript" src="js/concentration.js"></script>    
+
+    <link rel="stylesheet" type="text/css" href="css/Q_Slider.css" />
+    <link rel="stylesheet" type="text/css" href="css/concentration.css" />
+    <link rel="stylesheet" type="text/css" href="css/DataTable.css" />
+
+    <script type="text/javascript">
+      $(function(){
+      var c = new Concentration();
+      })
+    </script>    
+    
+
+  </head>
+  <body>
+
+    <div id="mainContent">
+      <div style="padding:20px 0 20px 0; font-size:18px; line-height:22px;">
+        Explore the effects of different variables on concentration.<br/>
+      </div>
+
+      <div id="simContent">
+
+        <div id="canvasContainer">
+          <canvas width="300" height="300" id="concentrationCanvas"></canvas>
+          <div id="tempReadout">10&deg;</div>
+          <div id="kPa">kPa</div>
+          <div id="concentrationReadout">concentration: <span id="concentrationReadoutValue"></span></div>
+        </div>
+
+        <div id="controlCover"></div>
+        <div id="controls">
+          
+          <div class="controlsLeft"><b>Solute Type</b> :</div>
+          <div class="controlsRight">
+            <select id="soluteType">
+              <option value="mix">Solid</option>
+              <option value="g">Gaseous</option>
+            </select>
+          </div>
+          
+          <div class="controlsLeft"><b>Container Shape</b> :</div>  
+          <div class="controlsRight">
+            <select id="containerShape">
+              <option value="flask">Erlenmeyer Flask</option>
+              <option value="beaker">Beaker</option>
+              <option value="round">Round-bottom Flask</option>
+            </select>      
+          </div>
+          
+          <div class="controlsLeftPad"><b>Solute Amount</b> <space /><span class="sm">(g)</span> :</div>
+          <div class="controlsRight">
+            <div class="sliderContainer">    
+              <div class="sliderMin">0</div>
+              <div id="s1"></div>
+              <div class="sliderMax">400</div>
+            </div>
+          </div>
+          
+          <div class="controlsLeftPad"><b>Water Amount</b> <space /><span class="sm">(g)</span> :</div>
+          <div class="controlsRight">
+            <div class="sliderContainer">    
+              <div class="sliderMin">0</div>
+              <div id="s2"></div>
+              <div class="sliderMax">100</div>
+            </div>
+          </div>
+          
+          <div class="controlsLeftPad"><b>Temperature</b> <space /><span class="sm">(&deg;C)</span> :</div>
+          <div class="controlsRight">
+            <div class="sliderContainer">    
+              <div class="sliderMin">10</div>
+              <div id="s3"></div>
+              <div class="sliderMax">80</div>
+            </div>
+          </div>
+
+
+          <div class="controlsLeftPad"><b>Pressure</b> <space /><span class="sm">(kPa)</span> :</div>
+          <div class="controlsRight">
+            <div class="sliderContainer">    
+              <div class="sliderMin">100</div>
+              <div id="s4"></div>
+              <div class="sliderMax">400</div>
+            </div>
+          </div>
+
+          <div class="controlsLeft"><space /></div>
+          <div class="controlsRight">
+            <div id="runTrial" class="btn" style="margin-left:25px; margin-top:10px;">Run Trial</div>
+          </div>
+          
+        </div>    
+        <br style="clear:right;" />
+
+        <div id="table1" style="margin-top:10px;"></div>
+
+      </div>
+    </div>
+
+
+  </body>
+</html>

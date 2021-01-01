@@ -1,0 +1,125 @@
+
+/* BORD: interactive data table */
+
+.bord {
+    border-collapse:collapse;
+    font-size: 12px;
+    table-layout: fixed;
+    width:640px;
+    color:#222;
+}
+
+#bordScrollDiv {
+    overflow-y:scroll;
+    height:210px;
+    width:660px;
+}
+
+#bordScrollDiv_Low {
+    height:205px;
+}
+
+
+.bordTH {
+    border-style:solid;
+    border-color:#ccc;
+    border-width:1px 1px 0px 1px;
+    background-color: #D0D1D7;
+    padding:4px 0 4px 0;
+    text-align:center;
+    vertical-align:bottom;
+}
+
+.bordNoBorder {
+    border: 0px;
+    width:16px;
+}
+
+.bordTD {
+    border: 1px solid #ddd;
+    padding:4px;
+    text-align:center;
+    vertical-align:middle;
+    height:20px;
+    background-color:#ffffff;
+}
+
+.hoverEnabled { cursor:pointer; }
+
+.bordRowCount {
+    border: 0px;
+    padding:4px;
+    text-align:center;
+    vertical-align:middle;
+    height:20px;
+    width:10px;
+}
+
+
+.hidden {
+    visibility:hidden;
+}
+
+.removeTR .bordTD {
+    background-color:#FF5E5E !important;
+    text-decoration: line-through !important;
+}
+
+.hilightTR {
+    background-color:#ECEFAC !important;
+}
+
+.blinkTR {
+   background-color:#F3E88E !important;
+}
+
+
+.thIcon {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+.bordRemoveIcon {
+    width: 16px;
+    height: 16px;
+    background-image:url('../images/bord_remove.png');
+    background-position: 0 -16px;
+    cursor:pointer;
+    display:block;
+    margin:0 auto;
+}
+.bordRemoveIcon.hilight { background-position: 0 0px; }
+
+
+.bordUpIcon {
+    width: 16px;
+    height: 16px;
+    background-image:url('../images/bord_arrowUp.png');
+    background-position: 0 -16px;
+    cursor:pointer;
+    display:block;
+    margin:0 auto;
+}
+.bordUpIcon.hilight { background-position: 0 0px; }
+
+.bordDownIcon {
+    width: 16px;
+    height: 16px;
+    background-image:url('../images/bord_arrowDown.png');
+    background-position: 0 -16px;
+    cursor:pointer;
+    display:block;
+    margin:0 auto;
+}
+.bordDownIcon.hilight { background-position: 0 0px; }
+
+
+.bordSelectIcon {
+    display:block;
+    margin:0 auto;
+    width:20px;
+    height:20px;
+    background-image:url('../concentration/media/star.png');
+}

@@ -1,0 +1,73 @@
+
+.SliderUI2{
+    position:relative;
+    height:40px;
+}
+
+.SliderUI2track {
+    position:absolute;
+    top:25px;
+    background-image: url('../images/greyTile.png');
+    background-repeat: repeat-x;
+    height: 7px; 
+}
+
+.colorEndCap {
+    position:absolute;
+    z-index:2;
+    left:0;
+    height:7px;
+    width:2px;
+    background-image: url('../images/colorTileEndCap.png');
+}
+
+.greyEndCap {
+    z-index:2;
+    float:right;
+    height:7px;
+    width:2px;
+    background-image: url('../images/greyTileEndCap.png');
+}
+
+.sliderThumb {
+    position:absolute;
+    top: -7px;
+    width: 15px; 
+    height: 20px; 
+    background-image: url('../images/thumb.png');
+    background-position: -15px 0;
+    z-index: 2;
+    margin-left:-7px;
+    /* margin-left MUST be minus 1/2 the total width */
+}
+
+.sliderThumb.enabled {
+    background-position: 0 0;
+}
+
+.sliderThumb.enabled:hover {
+    background-position: -15px 0;
+    cursor: pointer;
+}
+.thumbhover {
+    background-position: -15px 0;
+}
+
+.sliderThumbDisplay {
+    position:absolute;
+    top:0px;
+    width:40px;
+    height:20px;
+    margin-left:-20px;
+    text-align:center;
+    font-size:14px;
+    line-height:20px;
+}
+
+.sliderColor {
+    position:absolute;
+    background-image: url('../images/colorTile.png');
+    background-repeat: repeat-x;
+    height: 7px; 
+}
+
